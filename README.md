@@ -6,3 +6,4 @@
 - [x] Computed Properties
 - [x] Reactive Form
 - [x] State management
+- [x] Provider
