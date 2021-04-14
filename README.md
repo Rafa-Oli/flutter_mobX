@@ -7,3 +7,4 @@
 - [x] Reactive Form
 - [x] State management
 - [x] Provider
+- [x] Get It
