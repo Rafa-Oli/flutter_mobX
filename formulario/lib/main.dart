@@ -1,29 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:formulario/home.dart';
-import 'package:provider/provider.dart';
+import 'package:get_it/get_it.dart';
+import 'package:get_it/get_it.dart';
 
 import 'controller.dart';
 
 void main() {
+  GetIt getIt = GetIt.asNewInstance();
+  getIt.registerSingleton<Controller>(Controller());
+
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        Provider<Controller>(
-          create: (_) => Controller(),
-        )
-      ],
-      child: MaterialApp(
-        title: 'Flutter MobX',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: HomePage(),
+    return MaterialApp(
+      title: 'Flutter MobX',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: HomePage(),
     );
   }
 }
